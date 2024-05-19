@@ -1,0 +1,46 @@
+<div class="row">
+  <div class="col-12">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Employee List</h4>
+        <h5 class="card-subtitle text-muted">Company Employees Details overview</h5>
+        <div class="table-responsive">
+          <table class="table align-middle text-nowrap">
+              <thead>
+                  <tr>
+                      <th class="text-dark font-medium fs-4">Employee Name</th>
+                      <th class="text-dark font-medium fs-4">Email Address</th>
+                      <th class="text-dark font-medium fs-4">Password</th>
+                      <th class="text-dark font-medium fs-4">Contact</th>
+                      <th class="text-dark font-medium fs-4" >Actions</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr *ngFor='let ts of employee' >
+                      <td>
+                          <div class="d-flex align-items-center">
+                              <!-- <img src="assets/images/users/user4.jpg" alt="user" width="45" class="rounded-circle"> -->
+                              <img [src]=[ts.image_url] alt="user" width="45" class="rounded-circle">
+                              <div class="ms-3">
+                                  <h5 class="mb-0 font-medium">{{ts.name}}</h5>
+                              </div>
+                          </div>
+                      </td>
+                      <td class="fs-4">{{ts.email}}</td>
+                      <td class="fs-4">{{ts.password}}
+                          <!-- <span class="p-2 bg-{{ts.password}} rounded-circle d-inline-block ms-3"></span> -->
+                      </td>
+                      <td class="fs-4">{{ts.contact}}</td>
+                      <td class="fs-4">
+                       <button class="btn btn-success" (click)="employeeDetails(ts.id)">Update</button>
+                        <button class="btn btn-danger" style="margin: 5px;" (click)="deleteEmployee(ts.id)">Delete</button>
+                    </td>
+                  </tr>              
+              </tbody>
+          </table>
+      </div>
+      </div>
+    </div>
+   
+
+
