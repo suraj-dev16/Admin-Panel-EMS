@@ -11,6 +11,9 @@ export class TopCardsComponent implements OnInit {
 
   employeeCount:number = 0;
   topcards:topcard[];
+  // currentPage = 1;
+  // pageSize = 5;
+  // totalUsers = 0;
 
   constructor(private router :Router,private empService : EmployeeService) { 
 
@@ -18,7 +21,8 @@ export class TopCardsComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.empService.getEmployeesList().subscribe(
+    // const startIndex = (this.currentPage - 1) * this.pageSize;
+    this.empService.getEmployeeListWithoutPagination().subscribe(
       
       (data:any)=>{
         console.log("getting all employee in top cards :"+data);

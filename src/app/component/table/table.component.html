@@ -1,3 +1,4 @@
+<body>
 <div class="row">
   <div class="col-12">
     <div class="card">
@@ -35,12 +36,34 @@
                        <button class="btn btn-success" (click)="employeeDetails(ts.id)">Update</button>
                         <button class="btn btn-danger" style="margin: 5px;" (click)="deleteEmployee(ts.id)">Delete</button>
                     </td>
-                  </tr>              
-              </tbody>
+                </tr>  
+            </tbody>
           </table>
+
+          <table class="table align-middle text-nowrap">
+            <tbody>
+            <tr>
+                <td>
+                <div class="pagination">
+                  <button style="margin-right:1px;" *ngFor="let page of pages" 
+                       (click)="onPageChange(page)" [class.active]="page === currentPage">
+                   {{page}}
+
+                </button>
+                  <!-- <button (onClick)="goToPrevious()"> Previous </button>
+                  <button (onClick)="goToNext()"> Next </button> -->
+                </div>
+                <h5 style="color: rgb(238, 7, 19); padding: 20px;"> Active Page is {{currentPage}}</h5>
+                </td>
+            </tr>   
+            </tbody>
+            </table>
       </div>
       </div>
     </div>
+</div>
+</div>
+</body>
    
 
 

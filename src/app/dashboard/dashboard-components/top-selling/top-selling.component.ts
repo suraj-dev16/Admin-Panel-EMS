@@ -11,6 +11,9 @@ import { Router } from '@angular/router';
 export class TopSellingComponent implements OnInit {
 
   employee:EmployeeList[];
+  // currentPage = 1;
+  // pageSize = 5;
+  // totalUsers = 0;
 
   constructor(private employeeService:EmployeeService,
     private route: Router) { 
@@ -23,7 +26,8 @@ export class TopSellingComponent implements OnInit {
   }
 
   readEmpData(){
-    this.employeeService.getEmployeesList().subscribe((data:any)=>{
+    // const startIndex = (this.currentPage - 1) * this.pageSize;
+    this.employeeService.getEmployeeListWithoutPagination().subscribe((data:any)=>{
       this.employee = data;
       console.log(this.employee);
     }

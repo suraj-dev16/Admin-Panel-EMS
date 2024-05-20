@@ -12,8 +12,10 @@ import { NgbdnavBasicComponent } from './nav/nav.component';
 import { NgbdButtonsComponent } from './buttons/buttons.component';
 import { CardsComponent } from './card/card.component';
 import { TableComponent } from "./table/table.component";
+import { BadgeComponent } from './badge/badge.component';
 
 @NgModule({
+  declarations: [NgbdAlertBasicComponent,BadgeComponent],
   imports: [
     CommonModule,
     RouterModule.forChild(ComponentsRoutes),
@@ -21,12 +23,13 @@ import { TableComponent } from "./table/table.component";
     ReactiveFormsModule,
     NgbModule,
     NgbdpaginationBasicComponent,
-    NgbdAlertBasicComponent,
+    // NgbdAlertBasicComponent,
     NgbdDropdownBasicComponent,
     NgbdnavBasicComponent,
     NgbdButtonsComponent,
     CardsComponent,
     TableComponent
   ],
+  exports:[NgbdAlertBasicComponent,BadgeComponent]
 })
 export class ComponentsModule { }

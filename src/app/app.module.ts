@@ -21,6 +21,7 @@ import { Approutes } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SpinnerComponent } from './shared/spinner.component';
 import { NgbdAlertBasicComponent } from './component/alert/alert.component';
+import { ComponentsModule } from './component/component.module';
 
 
 
@@ -28,6 +29,7 @@ import { NgbdAlertBasicComponent } from './component/alert/alert.component';
   declarations: [
     AppComponent,
     SpinnerComponent,
+    // NgbdAlertBasicComponent
   ],
   imports: [
     CommonModule,
@@ -40,7 +42,8 @@ import { NgbdAlertBasicComponent } from './component/alert/alert.component';
     RouterModule.forRoot(Approutes, { useHash: false}),
     FullComponent,
     NavigationComponent,
-    SidebarComponent,    
+    SidebarComponent,  
+    ComponentsModule,  
   ],
   providers: [
     {
