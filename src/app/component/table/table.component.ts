@@ -100,7 +100,9 @@ export class TableComponent implements OnInit{
       );
       }
 
-
+  addEmployeePage(){
+    this.router.navigate(['/component/alert']);
+  }
 
 
   }

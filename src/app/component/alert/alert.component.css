@@ -15,11 +15,13 @@
   .card-title {
     font-size: 1.5rem;
     font-weight: bold;
+    color: rgb(239, 246, 253);
   }
   
   .btn-primary {
-    background-color: #f85873;;
+    background-color: #f85873;
     border: none;
+    color:aliceblue;
   }
   
   .btn-primary:hover {

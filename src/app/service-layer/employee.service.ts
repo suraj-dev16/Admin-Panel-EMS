@@ -45,6 +45,11 @@ export class EmployeeService {
   countUser(): any{
     return this.http.get(`${this.countUserBaseUrl}`);
   }
+
+  //get employee for dashboard
+  topEmpForDashboard():any{
+    return this.http.get(`${this.baseUrl}`+'/topUser')
+  }
   
 //create User - POST -  http://localhost:9090/api/user
 //get User - GET - http://localhost:9090/api/user

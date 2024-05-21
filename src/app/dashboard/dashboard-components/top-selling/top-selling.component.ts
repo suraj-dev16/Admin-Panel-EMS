@@ -27,10 +27,17 @@ export class TopSellingComponent implements OnInit {
 
   readEmpData(){
     // const startIndex = (this.currentPage - 1) * this.pageSize;
-    this.employeeService.getEmployeeListWithoutPagination().subscribe((data:any)=>{
-      this.employee = data;
-      console.log(this.employee);
-    }
+    // this.employeeService.getEmployeeListWithoutPagination().subscribe((data:any)=>{
+    //   this.employee = data;
+    //   console.log(this.employee);
+    // }
+    // )
+
+    this.employeeService.topEmpForDashboard().subscribe(
+      (data:any)=>{
+        this.employee = data;
+        console.log("top employee for dashboard "+this.employee);
+      }
     )
   
   }
