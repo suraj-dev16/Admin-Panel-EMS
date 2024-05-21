@@ -3,3 +3,5 @@ This is local Integration branch in local repository fo the changes done in loca
 so go to the main branch of github remote for the latest code of the frontend ..
 
 date--21-0-2024
+
+Now Both branches locIntegration and main are fixed with new codes. for frontend.
